@@ -1,0 +1,10 @@
+[
+	["Land_Cargo_Tower_V1_ruins_F",[-1.85352,-17.9351,-3.24249e-005],0],
+	["Land_Research_HQ_ruins_F",[14.8135,-5.24854,0],0],
+	["Land_Cargo20_military_ruins_F",[-9.01025,-19.2412,0],0],
+	["Land_TTowerBig_1_ruins_F",[0.838379,35.0684,0],0],
+	["Land_Wreck_Slammer_hull_F",[-16.2935,-12.2207,0],0],
+	["Land_Wreck_Slammer_F",[-11.3228,30.3442,0],0],
+	["Land_Wreck_Truck_dropside_F",[5.55371,-13.5146,0],0],
+	["Land_Wreck_Car_F",[17.4883,3.99365,0],0]
+]

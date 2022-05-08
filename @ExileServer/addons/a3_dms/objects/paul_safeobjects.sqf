@@ -1,0 +1,21 @@
+[
+	["Land_Cargo_House_V2_F",[0,15,0],0],
+	["Land_Cargo_House_V2_F",[6.2,15,0],0],
+	["Land_Cargo_House_V2_F",[-6.2,15,0],0],
+	["Land_Cargo_House_V2_F",[15,0,0],90],
+	["Land_Cargo_House_V2_F",[15,6.2,0],90],
+	["Land_Cargo_House_V2_F",[15,-6.2,0],90],
+	["Land_Cargo_House_V2_F",[0,-15,0],180],
+	["Land_Cargo_House_V2_F",[-6.2,-15,0],180],
+	["Land_Cargo_House_V2_F",[6.2,-15,0],180],
+	["Land_Cargo_House_V2_F",[-15,0,0],270],
+	["Land_Cargo_House_V2_F",[-15,-6.2,0],270],
+	["Land_Cargo_House_V2_F",[-15,6.2,0],270],
+	["Land_HBarrier_5_F",[-16,-16,0],45],
+	["Land_HBarrier_5_F",[16,16,0],45],
+	["Land_HBarrier_5_F",[16,-16,0],315],
+	["Land_HBarrier_5_F",[-16,16,0],315],
+	["Land_Bricks_V4_F",[-32,22,0],45],
+	["Land_Bricks_V3_F",[26,21,0],45],
+	["Land_Bricks_V2_F",[-7,-8,0],138]
+]
