@@ -8,8 +8,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
 ///////////////////////////////////////////////////////////////////////////////
-author = "Exile Mod Team";
-onLoadName = "Exile Mod";
+author = "Dark Exile Team";
+onLoadName = "Dark Exile Mod";
 onLoadMission= "www.exilemod.com";
 loadScreen = "exile_assets\texture\mod\logo.paa";
 disableChannels[] = {0, 2};
