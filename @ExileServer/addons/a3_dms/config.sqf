@@ -297,8 +297,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
                                             ["paul_apc",2],
                                             ["paul_shootingRange",5],
                                             ["paul_train_crash",2],
+											["paul_antiair",2],
                                             ["paul_c130",2],
-                                            ["paul_antiair",2],
                                             ["paul_garage",5]
 										];
 
