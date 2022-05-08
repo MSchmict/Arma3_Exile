@@ -2186,8 +2186,8 @@ class CfgExileArsenal
 	class Exile_Item_MetalPole						{ quality = 1; price = 800; };
 	class Exile_Item_MetalScrews					{ quality = 1; price = 100; };
 	//class Exile_Item_MetalWire					{ quality = 1; price = 100; };
-	//class Exile_Item_Cement						{ quality = 1; price = 20; };
-	//class Exile_Item_Sand							{ quality = 1; price = 20; };
+	class Exile_Item_Cement							{ quality = 1; price = 80; };
+	class Exile_Item_Sand							{ quality = 1; price = 80; };
 	//class Exile_Item_CarWheel						{ quality = 1; price = 1000; };
 	
 	// Added in 1.0.3, but not used
@@ -2271,8 +2271,7 @@ class CfgExileArsenal
 	class Exile_Item_Vishpirin						{ quality = 3; price = 300; };
 	class Exile_Item_Bandage	                    { quality = 2; price = 100; };
 	class Exile_Item_Heatpack	                    { quality = 1; price = 50; };
-
-	//class Exile_Item_Defibrillator				{ quality = 1; price = 7500; };
+	class Exile_Item_Defibrillator					{ quality = 1; price = 7500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Tools
@@ -3368,7 +3367,9 @@ ExileClient_action_repairVehicle_condition = "Overrides\ExileClient_action_repai
 	//ExAd XM8
 ExileClient_gui_xm8_slide = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
 ExileClient_gui_xm8_show = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
-};
+ExileClient_object_player_death_startBleedingOut = "Custom\EnigmaRevive\ExileClient_object_player_death_startBleedingOut.sqf"; //Happys Revive
+ExileClient_object_player_event_onInventoryOpened = "Custom\EnigmaRevive\ExileClient_object_player_event_onInventoryOpened.sqf"; //Happys Revive AntiDupe ---NEW with v0.65
+};	
 
 class CfgExileEnvironment
 {
@@ -4327,10 +4328,19 @@ class CfgInteractionMenus
 
 			class Identify: ExileAbstractAction
 			{
-				title = "Identify Body";
-				condition = "!(alive ExileClientInteractionObject)";
-				action = "_this call ExileClient_object_player_identifyBody";
+			title = "Identify Body";
+			condition = "!(alive ExileClientInteractionObject)";
+			action = "_this call ExileClient_object_player_identifyBody";
 			};
+		
+			//////////////Added by [_ZEN_]happydayz/////////////////
+		
+			class Revive: ExileAbstractAction
+			{
+			title = "Perform CPR";
+			condition = "(!(alive ExileClientInteractionObject) && (ExileClientInteractionObject getVariable ['EnigmaRevivePermitted', true]) && (magazines player find 'Exile_Item_Defibrillator' >= 0))";
+			action = "_this spawn Enigma_RevivePlyr";
+			};	
 			
 			class HideCorpse: ExileAbstractAction
 			{
@@ -5348,7 +5358,10 @@ class CfgTraderCategories
 			"Exile_Item_SafeKit",
 			"Exile_Item_CamoTentKit",
 			"Exile_Item_CodeLock",
-			"Exile_Item_MetalScrews"
+			"Exile_Item_MetalScrews",
+			"Exile_Item_Defibrillator",
+			"Exile_Item_Cement",
+			"Exile_Item_Sand"
 
 			/*
 			--Not for Sale--
@@ -5356,8 +5369,6 @@ class CfgTraderCategories
 			"Exile_Item_Laptop",
 			"Exile_Item_BaseCameraKit",
 			"Exile_Item_MetalHedgehogKit",
-			"Exile_Item_Cement",
-			"Exile_Item_Sand",
 			"Exile_Item_MobilePhone",
 			--Unused--
 			"Exile_Item_SprayCan_Black",
@@ -5371,7 +5382,6 @@ class CfgTraderCategories
 			"Exile_Item_Hammer",
 			"Exile_Item_Carwheel",
 			"Exile_Item_SleepingMat",
-			"Exile_Item_Defibrillator",
 			"Exile_Item_Wrench",
 			"Exile_Item_Rope"
 		*/
@@ -5537,10 +5547,8 @@ class CfgTraderCategories
 			"Exile_Item_InstaDoc",
 			"Exile_Item_Bandage",
 			"Exile_Item_Vishpirin",
-			"Exile_Item_Heatpack"
-
-			// Not available in 0.9.4!
-			//"Exile_Item_Defibrillator"
+			"Exile_Item_Heatpack",
+			"Exile_Item_Defibrillator"
 		};
 	};
 

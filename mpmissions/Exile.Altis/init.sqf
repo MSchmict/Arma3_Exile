@@ -4,3 +4,5 @@
 [] execVM "R3F_LOG\init.sqf";
 // Custom Apps
 [] execVM "xm8Apps\ExileSecurity\Init.sqf";
+// Load Revie System
+[] execVM "Custom\EnigmaRevive\init.sqf";
